@@ -241,17 +241,20 @@
 
 
  <fields>
-   <field name="_version_" type="long"      indexed="true"  stored="true"/>
-   <field name="uid" type="string" indexed="true" stored="true" required="true"/> 
-   <field name="site" type="string" indexed="true" stored="false"/>
-   <field name="page" type="string" indexed="true" stored="false"/>
-   <field name="mouse_x_y" type="string" indexed="true" stored="true"/> 
-   <field name="timestamp" type="date" indexed="true"  stored="false"/>
-   <field name="country" type="string" indexed="true" stored="false"/>
-   <field name="language" type="string" indexed="true" stored="false"/>
-   <field name="browser" type="string" indexed="true" stored="false"/>
-   <field name="operating_system" type="string" indexed="true" stored="false"/>
-   <field name="viewport_width" type="integer" indexed="true" stored="false"/>
+	<field name="uid" type="string" indexed="true" stored="true" required="true"/>   
+	<field name="mouse_x_y" type="string" indexed="true" stored="true"/>
+	<field name="timestamp" type="date" indexed="true"  stored="false"/>
+	<field name="viewport" type="string" indexed="true" stored="false"/>
+	<field name="visitor" type="string" indexed="true" stored="false"/>
+	<field name="visit" type="string" indexed="true" stored="false"/>
+	<field name="event" type="string" indexed="true" stored="false"/>
+	<field name="scroll" type="string" indexed="true" stored="false"/>
+	<field name="id" type="string" indexed="true" stored="false"/>
+	<field name="class" type="string" indexed="true" stored="false"/>
+	<field name="tag" type="string" indexed="true" stored="false"/>
+	<field name="browser" type="string" indexed="true" stored="false"/>
+	<field name="OS" type="string" indexed="true" stored="false"/>
+	<field name="url" type="string" indexed="true" stored="false"/>
  </fields>
 
  <!-- Field to use to determine and enforce document uniqueness. 
@@ -260,7 +263,7 @@
  <uniqueKey>uid</uniqueKey>
 
  <!-- field for the QueryParser to use when an explicit fieldname is absent -->
- <defaultSearchField>page</defaultSearchField>
+ <defaultSearchField>url</defaultSearchField>
 
  <!-- SolrQueryParser configuration: defaultOperator="AND|OR" -->
  <solrQueryParser defaultOperator="AND"/>

@@ -35,8 +35,20 @@ var opts = nomnom.opts({
 	},
 	'http-port': {
 		full: 'http-port',
-		default: 8000,
+		default: 80,
 		help: 'port to listen on',
+		metavar: 'PORT'
+	},
+	'solr-host': {
+		full: 'solr-host',
+		default: '127.0.0.1',
+		help: 'solr hostname',
+		metavar: 'HOST'
+	},
+	'solr-port': {
+		full: 'solr-port',
+		default: 8990,
+		help: 'solr port',
 		metavar: 'PORT'
 	},
 	'devent-host': {
